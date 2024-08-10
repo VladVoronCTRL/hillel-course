@@ -1,10 +1,10 @@
-original_list = [0, 6, 0, 7, 12, 0, 22]
-
-result = []
-for num in original_list:
-    if num != 0:
-        result.append(num)
-zero_count = original_list.count(0)
-result.extend([0] * zero_count)
-original_list[:] = result
-print(original_list)
+lst = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+if not lst:
+    result = 0
+else:
+    even_index_sum = 0
+for index,value in enumerate(lst):
+    if index % 2 == 0:
+        even_index_sum += value
+        result = even_index_sum * lst[-1]
+print(result)
